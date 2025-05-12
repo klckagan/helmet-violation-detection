@@ -1,0 +1,7 @@
+videos/
+frames/
+gt.txt
+labels.txt
+__pycache__/
+*.pyc
+*.spydata
