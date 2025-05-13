@@ -1,5 +1,7 @@
 videos/
 frames/
+yolo_dataset/images/train/
+yolo_dataset/labels/train/
 gt.txt
 labels.txt
 __pycache__/
