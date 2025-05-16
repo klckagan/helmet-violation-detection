@@ -57,3 +57,14 @@ else:
     plt.title(sample_frame)
     plt.axis("off")
     plt.show()
+
+
+
+
+
+
+'''
+gt.txt veya gt_cleaned.txt'deki bbox'ları ilgili frame görseli üzerine çizer.
+
+Matplotlib ile görselleştirir.
+'''

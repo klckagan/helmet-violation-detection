@@ -35,3 +35,14 @@ for video_name in sorted(os.listdir(video_folder)):
 
         cap.release()
         print(f"{video_name}: {saved_frame_count} frame kaydedildi.")
+
+
+
+
+
+'''
+
+videos/ klasöründeki videolardan frame çıkarır.
+
+Her videodan her 5. frame alınır ve frames/ içine .jpg olarak kaydedilir.
+'''
