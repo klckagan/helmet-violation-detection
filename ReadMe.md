@@ -21,6 +21,20 @@ Motorcycle riders are at high risk in road traffic, especially in developing cou
 
 ---
 
+
+## 🖼️ Example Predictions
+
+Here are some sample outputs from the trained YOLOv8 model:
+
+<p align="center">
+  <img src="results/036_frame_0190.jpg" alt="Helmet detection example 1" width="500"/>
+</p>
+
+<p align="center">
+  <img src="results/049_frame_0120.jpg" alt="Helmet detection example 2" width="500"/>
+</p>
+
+
 ## 🗂️ Project Structure
 
 ```
@@ -37,6 +51,7 @@ helmet_detection_project/
 ├── gt_cleaned.txt             # Cleaned ground truth (1–9 ➜ 0–8)
 ├── data.yaml                  # YOLOv8 training configuration
 └── README.md                  # This file
+└── results/                   # Result examples
 ```
 
 ---

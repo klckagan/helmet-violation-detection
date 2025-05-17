@@ -4,7 +4,7 @@ from ultralytics import YOLO
 model = YOLO("runs/helmet-detection/weights/best.pt")
 
 # Test için bir görüntü kullan (örneğin kendi çektiğin bir motorlu görüntüsü)
-results = model("054_frame_0115.jpg", save=True, conf=0.7)
+results = model("frames/044_frame_0020.jpg", save=True, conf=0.6)
 
 # Tahmin sonucu şu klasöre kaydedilir:
 # runs/detect/predict/ornek.jpg
