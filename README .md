@@ -1,3 +1,4 @@
+
 # 🪖 Helmet Violation Detection using YOLOv8
 
 This project detects violations of helmet rules by motorcyclists using computer vision and deep learning. It leverages the YOLOv8 object detection model to identify motorcyclists and classify whether they are wearing helmets.
@@ -17,23 +18,11 @@ Motorcycle riders are at high risk in road traffic, especially in developing cou
 - OpenCV
 - Matplotlib
 - Spyder (IDE)
-- GPU
+- GPU: Trained and tested on NVIDIA RTX 3050 Ti
+
+
 
 ---
-
-
-## 🖼️ Example Predictions
-
-Here are some sample outputs from the trained YOLOv8 model:
-
-<p align="center">
-  <img src="results/036_frame_0190.jpg" alt="Helmet detection example 1" width="500"/>
-</p>
-
-<p align="center">
-  <img src="results/049_frame_0120.jpg" alt="Helmet detection example 2" width="500"/>
-</p>
-
 
 ## 🗂️ Project Structure
 
@@ -44,14 +33,16 @@ helmet_detection_project/
 ├── yolo_dataset/
 │   ├── images/train/          # Images in YOLO format
 │   └── labels/train/          # Corresponding YOLO labels
+├── results/                   # Output prediction examples (.jpg, .mp4)
+├── report/                    # Evaluation metrics and training results
 ├── train_polo.py              # Model training script
+├── video_predict.py           # Runs inference on video files
 ├── convert_to_yolo.py         # Converts gt_cleaned.txt to YOLO format
 ├── label_visualizer.py        # Draws bounding boxes for visual check
-├── fast_test.py               # Runs inference on sample image/video
+├── fast_test.py               # Runs inference on sample image
 ├── gt_cleaned.txt             # Cleaned ground truth (1–9 ➜ 0–8)
 ├── data.yaml                  # YOLOv8 training configuration
 └── README.md                  # This file
-└── results/                   # Result examples
 ```
 
 ---
@@ -106,41 +97,74 @@ python convert_to_yolo.py
 python train_polo.py
 ```
 
-### 5. Run inference
+### 5. Run inference on images
 ```
 python fast_test.py
 ```
 
+### 6. Run inference on videos
+```
+python video_predict.py
+```
+
+---
+
+## 🖼️ Example Predictions
+
+Here are some sample outputs from the trained YOLOv8 model:
+
+<p align="center">
+  <img src="results/036_frame_0190.jpg" alt="Helmet detection example 1" width="500"/>
+</p>
+
+<p align="center">
+  <img src="results/049_frame_0120.jpg" alt="Helmet detection example 2" width="500"/>
+</p>
+
 ---
 
 ## 📈 Outputs
+
 Trained model and logs are saved under:
 ```
 runs/helmet-detection/
 ```
-Includes:
-- `best.pt`: best performing model
-- `results.png`: training curves
-- `results.csv`: contains mAP, precision, recall scores for each epoch  
-- `results.png`: training curves  
-- `confusion_matrix.png`: class-wise performance overview
 
+Evaluation files are stored under the `report/` folder:
 
+- `report/results.png`: training curves  
+- `report/results.csv`: contains mAP, precision, recall scores for each epoch  
+- `report/confusion_matrix.png`: class-wise performance overview  
+- `report/P_curve.png`, `report/R_curve.png`, `report/F1_curve.png`: class-wise precision-recall-f1 charts
 
+---
+
+## 📊 Evaluation Summary
+
+- mAP@50: ~0.80  
+- Precision: ~0.75  
+- Recall: ~0.70  
+
+The model was trained using YOLOv8 on a cleaned dataset of helmet usage in real traffic videos.  
+It successfully detects both motorbike riders and their helmet status with high confidence.
 
 ---
 
 ## 🛑 License Notice
 
 The dataset is licensed for academic and challenge use only under the original [DATASET LICENSE AGREEMENT](./DATASET%20LICENSE%20AGREEMENT.pdf).  
+Therefore, the dataset is not included in this GitHub repository in accordance with the license terms.
+Interested users may request access through the official competition website.
+
+
 
 
 ---
 
 ## 🧑‍💻 Author
 
-- **Mehmet Çokol**
- Eskişehir Teknik Üniversitesi
-- Computer Vision Challenge Track 5 – [Helmet Rule Violation Detection]
+- **Mehmet Çokol**  
+  Eskişehir Teknik Üniversitesi  
+  Computer Vision Challenge Track 5 – *Helmet Rule Violation Detection*
 
 ---
