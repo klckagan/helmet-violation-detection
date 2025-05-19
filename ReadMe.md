@@ -121,7 +121,12 @@ runs/helmet-detection/
 Includes:
 - `best.pt`: best performing model
 - `results.png`: training curves
-- `metrics.json`: mAP, precision, recall scores
+- `results.csv`: contains mAP, precision, recall scores for each epoch  
+- `results.png`: training curves  
+- `confusion_matrix.png`: class-wise performance overview
+
+
+
 
 ---
 
@@ -135,7 +140,7 @@ The dataset is licensed for academic and challenge use only under the original [
 ## 🧑‍💻 Author
 
 - **Mehmet Çokol**
--Eskişehir Teknik Üniversitesi
+ Eskişehir Teknik Üniversitesi
 - Computer Vision Challenge Track 5 – [Helmet Rule Violation Detection]
 
 ---
