@@ -163,7 +163,7 @@ Interested users may request access through the official competition website.
 
 ## 🧑‍💻 Author
 
-- **Mehmet Çokol**  
+- **Kağan Kılıç** and  **Mehmet Çokol**  
   Eskişehir Teknik Üniversitesi  
   Computer Vision Challenge Track 5 – *Helmet Rule Violation Detection*
 
